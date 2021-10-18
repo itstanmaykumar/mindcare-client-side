@@ -9,3 +9,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-outline-main{
+  color: #28c6be;
+  border: 1px solid #28c6be;
+  transition-duration: .3s;
+}
+.btn-outline-main:hover{
+  background-color: #28c6be;
+  color: white;
+}
