@@ -4,7 +4,7 @@ import nfImg from '../../404.png';
 const NotFound = () => {
     return (
         <div className="container">
-            <div className="py-5 my-5 row align-items-center justify-content-around">
+            <div className="pb-5 mt-5 row align-items-center justify-content-around">
                 <div className="col-lg-4 col-md-5 text-start">
                     <h2 className="text-main fw-bolder">Hmmm...</h2>
                     <h4 className="text-main">Looks like something went wrong.</h4>

@@ -10,9 +10,20 @@ const Home = () => {
                     <p className="fw-bolder text-main">HEALING THERAPY</p>
                     <h1 className="fw-bolder">Make Your Own <span className="text-main">Mental Health</span> A Priority.</h1>
                     <p className="text-second">Choose your own therapist...</p>
-                    <Link className="px-4 btn btn-main fs-5 rounded-pill" to="/services">Get Started</Link>
+                    <Link className="px-4 my-4 btn btn-main fs-5 rounded-pill" to="/services">Get Started</Link>
                 </div>
                 <div className="col-md-7">
+                    <img className="img-fluid" src={showImg} alt="showcase img" />
+                </div>
+            </section>
+            <section className="my-3 row justify-content-between align-items-center">
+                <div className="col-md-5 order-md-2 text-start">
+                    <p className="fw-bolder text-main">HEALING THERAPY</p>
+                    <h1 className="fw-bolder">Make Your Own <span className="text-main">Mental Health</span> A Priority.</h1>
+                    <p className="text-second">Choose your own therapist...</p>
+                    <Link className="px-4 my-4 btn btn-main fs-5 rounded-pill" to="/services">Get Started</Link>
+                </div>
+                <div className="col-md-7 order-md-1">
                     <img className="img-fluid" src={showImg} alt="showcase img" />
                 </div>
             </section>

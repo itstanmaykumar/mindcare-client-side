@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="py-4 row justify-content-between text-start">
                     <div className="mt-4 col-lg-2 col-sm-6 order-lg-2 order-xs-2">
-                        <h6 className="mb-2 text-white"><span className="border-2 border-bottom border-main">Quick </span>Links</h6>
+                        <h6 className="mb-2 text-white"><span className="border-2 border-bottom border-main">Quick L</span>inks</h6>
                         <Link className="text-decoration-none d-block text-second foo-hover" to="/info">About Us</Link>
                         <Link className="text-decoration-none d-block text-second foo-hover" to="/feedback">Feedback</Link>
                         <Link className="text-decoration-none d-block text-second foo-hover" to="/services">Make Appointment</Link>
