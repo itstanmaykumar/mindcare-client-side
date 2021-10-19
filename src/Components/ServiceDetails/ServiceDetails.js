@@ -58,7 +58,7 @@ const ServiceDetails = () => {
                         <img className="img-fluid" src={dpic} alt="date pick" />
                     </div>
                     <div className="col-lg-6">
-                        {/* <div className="form-body">
+                        <div className="form-body">
                             <div className="row">
                                 <div className="form-holder">
                                     <div className="form-content">
@@ -104,7 +104,7 @@ const ServiceDetails = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>

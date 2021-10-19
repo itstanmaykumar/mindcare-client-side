@@ -4,7 +4,8 @@ import useAuth from '../../hooks/useAuth';
 import logo from '../../logo.png';
 
 const Header = () => {
-    const { user, signOuT } = useAuth(); 
+    const { user, logOut } = useAuth();
+    // console.log(user);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +21,7 @@ const Header = () => {
                     <ul className="mt-3 navbar-nav ms-auto me-5 mb-lg-0">
                         <li className="nav-item me-2">
                             <p className="nav-link fw-bolder">
-                                { user.email && <span>Hi {user.displayName.slice(0, user.displayName.indexOf(" "))}, </span> }
+                                { user?.email && <span>Hi {user.displayName.slice(0, user.displayName.indexOf(" "))}, </span> }
                             </p>
                         </li>
                         <li className="nav-item me-2">
@@ -37,17 +38,17 @@ const Header = () => {
                         </li>
                         <li className="me-5"></li>
 
-                        {user.email ? (
+                        {user?.email ? (
                             <li className="nav-item">
-                            <Link className="btn btn-outline-main fw-bolder" to="/join" onClick={signOuT}>
+                            <Link className="btn btn-outline-main fw-bolder" to="/join" onClick={logOut}>
                                 Sign Out <i className="fas fa-sign-in-alt"></i>
                             </Link>
                             </li>
                             ) : (
                             <li className="nav-item">
-                            <Link className="btn btn-outline-main fw-bolder" to="/join">
-                                Sign In <i className="fas fa-sign-in-alt"></i>
-                            </Link>
+                                <Link className="btn btn-outline-main fw-bolder" to="/join">
+                                    Sign In <i className="fas fa-sign-in-alt"></i>
+                                </Link>
                             </li>
                         )}
                     </ul>

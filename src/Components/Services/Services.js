@@ -25,7 +25,7 @@ const Services = () => {
                     </div>
                 </div>
             </section>
-            <section className="container">
+            <section className="container mt-2 mb-5">
                 <h1 className="mt-5 fw-bolder">Find therapy</h1>
                 <p className="pb-3 col-12 text-second">We Are Here For You!</p>
                 <div className="row g-4">
