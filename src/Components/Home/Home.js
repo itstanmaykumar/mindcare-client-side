@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import showImg from '../../showcase-img.png'
-import home1 from '../../home01.png'
-import home2 from '../../home02.png'
+import showImg from '../../showcase-img.png';
+import home1 from '../../home01.png';
+import home2 from '../../home02.png';
+import home3 from '../../home03.png';
+import Service from '../Service/Service';
 
 const Home = () => {
+
+    const [services, setServices] = useState([]);
+
+    useEffect(() =>{
+        fetch('./services.json')
+        .then(res => res.json())
+        .then(data => setServices(data))
+    },[]);
+
     return (
         <div className="container">
             <section className="my-3 row justify-content-between align-items-center">
@@ -38,6 +49,27 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className="py-5 row g-4">
+                <h1 className="my-5 col-12 fw-bolder">Find Your Therapy</h1>
+                {
+                    services.map((service) => (
+                        <Service key={service.id} service={service}></Service>
+                    ))
+                }
+            </section>
+            <section className="container">
+                <div className="my-3 row align-items-center">
+                    <h1 className="my-2 col-12 fw-bolder">Join Our Group <span className="text-main">Therapy</span> Sessions</h1>
+                    <div className="col-lg-7">
+                        <img className="img-fluid" src={home3} alt="support img" />
+                    </div>
+                    <div className="col-lg-5">
+                        <h5 className="text-end">“Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.”</h5>
+                        <Link className="mt-3 btn btn-main rounded-pill" to="/group-therapy">Join Now</Link>
+                    </div>
+                </div>
+            </section>
+            <section></section>
         </div>
     );
 };

@@ -1,11 +1,13 @@
 import React from 'react';
+import useFirebase from "../../hooks/useFirebase";
 
 const Join = () => {
-    return (
-        <div>
-            <h1>This is Log In</h1>
-        </div>
-    );
+  const { googleSignIn, users } = useFirebase();
+  return (
+    <div>
+      <button onClick={googleSignIn}>google</button>
+    </div>
+  );
 };
 
 export default Join;

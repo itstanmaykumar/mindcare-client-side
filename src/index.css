@@ -39,3 +39,10 @@ code {
 .foo-hover:hover{
   color: white;
 }
+.rounded-20{
+  border-radius: 20px;
+}
+.box:hover{
+  box-shadow: 5px 5px 15px #949494 !important;
+  transition-duration: .2s;
+}

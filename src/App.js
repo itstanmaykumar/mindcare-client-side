@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 import Blogs from './Components/Blogs/Blogs';
 import Info from './Components/Info/Info';
 import Join from './Components/Join/Join';
@@ -28,6 +29,10 @@ function App() {
 
             <Route exact path="/services">
               <Services></Services>
+            </Route>
+
+            <Route exact path="/services/:serviceId">
+              <ServiceDetails></ServiceDetails>
             </Route>
 
             <Route exact path="/blogs">
