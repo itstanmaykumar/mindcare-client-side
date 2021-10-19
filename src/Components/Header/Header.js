@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../logo.png';
 
 const Header = () => {
+    const { user, signOuT } = useAuth(); 
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,20 +17,39 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="mb-2 navbar-nav ms-auto me-5 mb-lg-0">
+                    <ul className="mt-3 navbar-nav ms-auto me-5 mb-lg-0">
+                        <li className="nav-item me-2">
+                            <p className="nav-link fw-bolder">
+                                { user.email && <span>Hi {user.displayName.slice(0, user.displayName.indexOf(" "))}, </span> }
+                            </p>
+                        </li>
                         <li className="nav-item me-2">
                             <Link className="nav-link" to="/services">Find therapy</Link>
                         </li>
                         <li className="nav-item me-2">
-                            <Link className="nav-link" to="/blogs">Bolgs</Link>
+                            <Link className="nav-link" to="/blogs">Read Bolgs</Link>
                         </li>
                         <li className="nav-item me-2">
                             <Link className="nav-link" to="/info">Info</Link>
                         </li>
-                        <li className="me-5"></li>
-                        <li className="nav-item">
-                            <Link className="btn btn-outline-main fw-bolder" to="/join">Sign In <i className="fas fa-sign-in-alt"></i></Link>
+                        <li className="nav-item me-2">
+                            <Link className="nav-link" to="/contact">Contact Us</Link>
                         </li>
+                        <li className="me-5"></li>
+
+                        {user.email ? (
+                            <li className="nav-item">
+                            <Link className="btn btn-outline-main fw-bolder" to="/join" onClick={signOuT}>
+                                Sign Out <i className="fas fa-sign-in-alt"></i>
+                            </Link>
+                            </li>
+                            ) : (
+                            <li className="nav-item">
+                            <Link className="btn btn-outline-main fw-bolder" to="/join">
+                                Sign In <i className="fas fa-sign-in-alt"></i>
+                            </Link>
+                            </li>
+                        )}
                     </ul>
                     </div>
                 </div>

@@ -58,20 +58,19 @@ const ServiceDetails = () => {
                         <img className="img-fluid" src={dpic} alt="date pick" />
                     </div>
                     <div className="col-lg-6">
-                        <div class="form-body">
-                            <div class="row">
-                                <div class="form-holder">
-                                    <div class="form-content">
-                                        <div class="form-items">
-                                            <form class="requires-validation" novalidate />
-                                                <div class="col-md-12 my-2">
-                                                    <input class="form-control" type="text" name="name" placeholder="Your Full Name" required />
+                        {/* <div className="form-body">
+                            <div className="row">
+                                <div className="form-holder">
+                                    <div className="form-content">
+                                        <div className="form-items">
+                                                <div className="my-2 col-md-12">
+                                                    <input className="form-control" type="text" name="name" placeholder="Your Full Name" required />
                                                 </div>
-                                                <div class="col-md-12 my-2">
-                                                    <input class="form-control" type="email" name="email" placeholder="E-mail Address" required />
+                                                <div className="my-2 col-md-12">
+                                                    <input className="form-control" type="email" name="email" placeholder="E-mail Address" required />
                                                 </div>
-                                                <div class="col-md-12 my-2">
-                                                    <select class="form-select mt-3" required>
+                                                <div className="my-2 col-md-12">
+                                                    <select className="mt-3 form-select" required>
                                                         <option selected disabled value="">Pick A Week Date</option>
                                                         <option value="jweb">Satday</option>
                                                         <option value="sweb">Monday</option>
@@ -79,33 +78,33 @@ const ServiceDetails = () => {
                                                     </select>
                                                 </div>
 
-                                            <div class="col-md-12 my-2">
+                                            <div className="my-2 col-md-12">
                                                 <label className="p-1 mb-3 rounded-3 me-3 btn-main" for="pickTime"> Pick Your Suitable Time</label>
                                                 <input type="time" name="" id="pickTime" />
                                             </div>
 
-                                            <div class="col-md-12 my-2">
-                                                <label class="mb-3 me-2 fw-bolder text-second" for="gender">Gender: </label>
-                                                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required />
-                                                <label class="btn btn-sm btn-outline-main me-3" for="male">Male</label>
+                                            <div className="my-2 col-md-12">
+                                                <label className="mb-3 me-2 fw-bolder text-second" for="gender">Gender: </label>
+                                                <input type="radio" className="btn-check" name="gender" id="male" autocomplete="off" required />
+                                                <label className="btn btn-sm btn-outline-main me-3" for="male">Male</label>
 
-                                                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required />
-                                                <label class="btn btn-sm btn-outline-main" for="female">Female</label>
+                                                <input type="radio" className="btn-check" name="gender" id="female" autocomplete="off" required />
+                                                <label className="btn btn-sm btn-outline-main" for="female">Female</label>
                                             </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input text-main" type="checkbox" value="" id="invalidCheck" required />
-                                                <label class="form-check-label">I confirm that all data are correct</label>
+                                            <div className="form-check">
+                                                <input className="form-check-input text-main" type="checkbox" value="" id="invalidCheck" required />
+                                                <label className="form-check-label">I confirm that all data are correct</label>
                                             </div>
 
-                                            <div class="form-button mt-3">
-                                                <button id="submit" type="submit" class="btn btn-main">Register</button>
+                                            <div className="mt-3 form-button">
+                                                <button id="submit" type="submit" className="btn btn-main">Register</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
