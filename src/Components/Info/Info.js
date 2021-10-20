@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import doctor from '../../thr.png'
-import help from '../../help.png'
-import { useState } from 'react/cjs/react.development';
+import doctor from '../../thr.png';
+import help from '../../help.png';
 
 const Info = () => {
 

@@ -20,7 +20,15 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto me-5 mb-lg-0">
                         <li className="nav-item me-2">
                             <p className="nav-link fw-bolder">
-                                { user?.email && <span>Hi {user.displayName.slice(0, user.displayName.indexOf(" "))}, </span> }
+                                <span>Hi{" "}
+                                { user?.email &&
+                                ( user?.displayName ? 
+                                    user.displayName.slice(0, user.displayName.indexOf(" "))
+                                    :
+                                    user.email.slice(0, user.email.indexOf("@"))
+                                )
+                                },
+                                </span>
                             </p>
                         </li>
                         <li className="nav-item me-2">
