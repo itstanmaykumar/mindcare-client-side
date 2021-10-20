@@ -5,7 +5,6 @@ import logo from '../../logo.png';
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    // console.log(user);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,10 +38,10 @@ const Header = () => {
                         <li className="me-5"></li>
 
                         {user?.email ? (
-                            <li className="nav-item">
-                            <Link className="btn btn-outline-main fw-bolder" to="/join" onClick={logOut}>
-                                Sign Out <i className="fas fa-sign-in-alt"></i>
-                            </Link>
+                            <li className="nav-item" onClick={logOut}>
+                                <Link className="btn btn-outline-main fw-bolder" to="/join">
+                                    Sign Out <i className="fas fa-sign-in-alt"></i>
+                                </Link>
                             </li>
                             ) : (
                             <li className="nav-item">
