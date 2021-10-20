@@ -1,9 +1,12 @@
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import login from '../../login.png';
 
 const Join = () => {
+    const auth = getAuth();
     const { googleSignIn } = useAuth();
     const location = useLocation();
     const history = useHistory();
@@ -15,6 +18,27 @@ const Join = () => {
             history.push(redirect_url);
         });
     };
+    const [email, setEmail] = useState("");
+    const [password, setPass] = useState("");
+    const [errorMsg, setErrorMsg] = useState("");
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+    const handlePassChange = (e) => {
+        setPass(e.target.value);
+    };
+    const handleSignIn = (e) =>{
+        console.log(email, password);
+        e.preventDefault();
+        signInWithEmailAndPassword( auth, email, password)
+        .then((result) => {
+            history.push(redirect_url);
+        })
+        .catch((error) => {
+            setErrorMsg(error.message);
+        });
+    };
 
     return (
     <div className="container py-5">
@@ -24,15 +48,18 @@ const Join = () => {
                 <img className="img-fluid" src={login} alt="login" />
             </div>
             <div className="col-md-6 pe-5">
-                <div className="my-2">
-                    <input className="form-control" type="email" name="email" placeholder="Your E-mail" />
-                </div>
-                <div className="my-2">
-                    <input className="form-control" type="password" name="password" placeholder="Your Password"/>
-                </div>
-                <div className="pt-3 text-start">
-                    <button type="submit" className="btn btn-main me-3 fw-bolder">Sign In</button>
-                </div>
+                <form onSubmit={handleSignIn}>
+                    <small className="text-danger">{ errorMsg }</small>
+                    <div className="my-2">
+                        <input onBlur={handleEmailChange} className="form-control" type="email" name="email" placeholder="Your E-mail" />
+                    </div>
+                    <div className="my-2">
+                        <input onBlur={handlePassChange} className="form-control" type="password" name="password" placeholder="Your Password"/>
+                    </div>
+                    <div className="pt-3 text-start">
+                        <button type="submit" className="btn btn-main me-3 fw-bolder">Sign In</button>
+                    </div>
+                </form>
                 <p className="py-3 my-0 text-start text-second">Don't Have An Account? <Link className="px-2 py-1 rounded-3 text-decoration-none btn-outline-main" to="/signup">Sign Up</Link></p>
                 <hr />
                 <button className="me-auto btn btn-outline-main d-block text-start" onClick={handleGoogle}><i className="fab fa-google"></i> Sign In With Google</button>

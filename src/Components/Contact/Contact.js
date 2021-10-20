@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import contact from "../../contatct.png";
 
 const Contact = () => {
@@ -49,7 +50,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="col-12">
-                <button type="submit" className="px-5 btn btn-outline-main fw-bolder">Submit</button>
+                <Link to="/contactusemail" type="submit" className="px-5 btn btn-outline-main fw-bolder">Submit</Link>
                 </div>
             </form>
         </div>

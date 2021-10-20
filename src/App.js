@@ -17,11 +17,11 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AuthProvider>
           <Router>
             <Header></Header>
-            <Switch>
+            <Switch className="container">
               <Route exact path="/">
                 <Home></Home>
               </Route>

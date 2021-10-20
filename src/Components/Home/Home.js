@@ -64,8 +64,8 @@ const Home = () => {
                         <img className="img-fluid" src={home3} alt="support img" />
                     </div>
                     <div className="col-lg-5">
-                        <h5 className="text-end">“Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.”</h5>
-                        <Link className="mt-3 btn btn-main rounded-pill" to="/group-therapy">Join Now</Link>
+                        <h5 className="text-center">“Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.”</h5>
+                        <Link className="mx-auto mt-3 w-50 d-block btn btn-main rounded-pill" to="/group-therapy">Join Now</Link>
                     </div>
                 </div>
             </section>
