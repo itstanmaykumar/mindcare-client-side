@@ -17,7 +17,7 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="mt-3 navbar-nav ms-auto me-5 mb-lg-0">
+                    <ul className="navbar-nav ms-auto me-5 mb-lg-0">
                         <li className="nav-item me-2">
                             <p className="nav-link fw-bolder">
                                 { user?.email && <span>Hi {user.displayName.slice(0, user.displayName.indexOf(" "))}, </span> }

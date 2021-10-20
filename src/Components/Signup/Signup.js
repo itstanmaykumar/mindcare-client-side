@@ -1,10 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import signin from '../../signin.png';
 
 const Signup = () => {
     const { googleSignIn } = useAuth(); 
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home';
+
+    const handleGoogle = () => {
+        googleSignIn()
+        .then ((result) => {
+            history.push(redirect_url);
+        });
+    };
+
     return (
     <div className="container py-5">
         <h1 className="fw-bolder text-main">Create A New Account</h1>
@@ -27,7 +39,7 @@ const Signup = () => {
                 </div>
                 <p className="py-3 my-0 text-start text-second">Already Have An Account? <Link className="px-2 py-1 rounded-3 text-decoration-none btn-outline-main" to="/join">Sign In</Link></p>
                 <hr />
-                <button className="me-auto btn btn-outline-main d-block text-start" onClick={googleSignIn}><i className="fab fa-google"></i> Sign Up With Google</button>
+                <button className="me-auto btn btn-outline-main d-block text-start" onClick={handleGoogle}><i className="fab fa-google"></i> Sign Up With Google</button>
             </div>
         </div>
     </div>
