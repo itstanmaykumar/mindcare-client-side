@@ -32,7 +32,6 @@ const Signup = () => {
     }
 
     const handleSignUp = (e) => {
-        console.log( email, password );
         createUserWithEmailAndPassword( auth, email, password )
         .then ((result) => {
             history.push(redirect_url);
