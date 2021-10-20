@@ -6,6 +6,28 @@ Live Site Link: https://mindcare-e6f9d.web.app/
 
 It's an website where you find important blogs, therapy sessions if you or your familiar ones are dealing with mental issues.
 
+## Some Features Of This Project
+
+### `Sign In`
+
+login using email password & google
+
+### `Sign Up`
+
+create new account & google sign up
+
+### `Blog`
+
+Read Blogs after log in
+
+### `Find Therapy`
+
+Find Different therapy sessions
+
+### `Info`
+
+about section and therapists list
+
 ## Programming Features Of This Project
 
 ### `Firbase Authorization & Authentication`
@@ -34,7 +56,11 @@ This site was deployed on Firebase. The live site link is provided on the top of
 
 ### `React`
 
-React JS was mainly used in this project.
+React JS was used in this project.
+
+### `Router`
+
+Private routing was mainly used in this project.
 
 ### `HTML`
 
