@@ -26,7 +26,7 @@ const Contact = () => {
                     <textarea className="p-3 w-100" name="message" id="" rows="3" placeholder="Please Give Us Feedback If You Have Any..."></textarea>
                 </div>
                 <div className="col-12">
-                    <label for="inputState" className="form-label">
+                    <label htmlFor="inputState" className="form-label">
                         Address
                     </label>
                     <input type="text" className="form-control" id="inputAddress2" placeholder="Building No, 12 Street, Ward No..." />
@@ -43,7 +43,7 @@ const Contact = () => {
                 <div className="col-12">
                     <div className="form-check">
                         <input className="form-check-input" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label" for="gridCheck">
+                        <label className="form-check-label" htmlFor="gridCheck">
                             Send Me News Letter
                         </label>
                     </div>
